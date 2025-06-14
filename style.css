@@ -1,0 +1,411 @@
+body {
+  font-family: 'Times New Roman', serif;
+  margin:  0px;
+  padding:  0px; 
+  background: #ff0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+ min-width: 70vh;
+  min-height: 1100px;
+}
+.a4-page {
+  width: 810px;
+  min-height: 1100px;
+   top:90px;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border: 5px dotted;
+  border-image: linear-gradient(to right, gold,green ,blue) 1;
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  background: linear-gradient(140deg, #fff 80%, #ffc 80%, #cff 90%, #fff 100%); 
+  padding: 10px;  position: relative; top :0px; left: 0px;
+  margin: 0;
+  color: #000;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+ .profile-picture-container {
+            position: relative;
+            width: 150px;
+            height: 150px;
+   background: linear-gradient(150deg, #909 0%, #005 50%, #00990033  100%);
+            overflow: hidden;
+            border-radius: 5%;
+            margin-right: 15px;
+            cursor: pointer;
+            transition: all 0.5s ease-in-out;
+          animation: aa 0.5s ease-in-out;
+        
+        }
+        .profile-picture {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .profile-picture-container.rotated {
+            transform: rotateY(360deg);
+        }
+@keyframe wa {}
+.header-content h1 {
+  margin: 0px 0px 30px 0px;
+  font-size: 20px;
+  text-shadow: 2px 2px 1px #ccc, -2px -2px 1px #fff;
+}
+.header-content {padding-left:20px; }
+.header-content p{ font-size: 15px; margin-bottom: -15px; color:#000;}
+.header-content a {font-size: 15px; margin-bottom: -15px; color:#900099; text-decoration: none; }
+
+.body-content {
+  display: flex;
+    position: relative; left: 0px; top:0px;
+  gap: 20px;
+  padding: 2px;
+}
+
+.left-column {
+    width: 163px;
+  flex: 1;
+  padding-left: 10px;
+  
+}
+
+.right-column {
+  flex: 2; border-left: 1px solid #00000022;
+  padding-left: 10px;
+}
+
+.section {
+  margin-bottom: 0px;
+  padding: 1px;
+  background: #dddddd33;
+  border-radius: 3px;
+}
+
+.section h2 {
+  font-size: 12px;
+  color: #000;  
+  background: linear-gradient(35deg, #fff 0%, #00990033 50%, #fff 100%);
+  border-bottom: 2px solid #00009922; 
+  padding-bottom: 0px;
+}
+.personal-info-table { width: 130%; border-collapse:collapse; font-size: 8px; padding-left: 0px; margin: 0; }
+.personal-info-table td { vertical-align: center; border: none; }
+.personal-info-table td:first-child { font-weight: bold; width: auto; }
+.personal-info-table td img{height: 8px ; width:8px; gap: 3px;}
+/* স্কিল সেকশনের স্টাইল */
+.skills-list ul {
+  list-style-type: none; /* প্রথম লেভেলে বুলেট */
+  padding-left: 1px;
+}
+
+.skills-list ul li {
+  font-size: 10px;
+  list-style: none;
+  padding-left: 1px;
+   
+}
+.skills-list ul li::before {
+  content: "👉  "; /* ইফতার আইকন */
+  font-size: 1px;
+  position: relative;
+   
+}
+/* উপ-আইটেমে ইফতার আইকন যুক্ত করা */
+.skills-list ul li ul {
+  list-style: none; /* ডিফল্ট বুলেট বন্ধ */
+  padding-left: 30px;
+}
+
+.skills-list ul li ul li::before {
+  content: "⭐"; /* ইফতার আইকন */
+  font-size: 1px;
+  position: relative;
+  left: -2px;
+}
+
+.languages { }
+.language-item { margin-bottom: 10px; }
+.language-name { font-weight: bold; margin-bottom: 5px; font-size: 10px; }
+.language-bar-container { width: 100%; background-color: #00009933; border-radius: 50px; height: 7px; overflow: hidden; position: relative; }
+.language-bar { height: 100%; border-radius: 15px; background: green; animation: languageBarFill 2s forwards; }
+
+.profile-objective p {
+  text-align: justify;
+  font-size: 8px; padding-right: 0px;
+}
+.education-item {
+  display: flex; padding-right: 20px;
+  justify-content: space-between;
+  /* নিচের বর্ডার Education item-এর নিচে আছে, এটা থাকছে */
+  border-bottom: 1px solid #ddf;
+}
+
+.education-details {
+  flex: 1;
+  font-size: 10px;
+}
+.education-details strong {font-size: 12px;}
+.education-details .institution{font-size: 8px;}
+.education-details .year-gpa{font-size: 8px; font-weight: bold;}
+
+ .qr-codes-container {display: flex; gap: 2px;}
+ .qr-column {text-align: center;width: 52px; /* Adjust as needed */}
+ .qr-code img {width: 50px; height: 50px;border : 1px solid #ffc0c039 ;cursor: pointer; }
+ .qr-column a {display: block;margin-top: -5px;text-decoration: none; color:#000;font-size: 5px;}
+
+@media print {
+  body {
+    background: #fff;
+  }
+  .a4-page, .header, .section {
+    box-shadow: none; background: #fff; color:#000;
+  }
+  .language-bar {
+    background: #ccc !important;
+  }
+}
+ 
+
+.achievements ul{list-style-type:none;padding:0;margin-top:0;font-size:8px}
+.achievements li{margin-bottom:10px;line-height:1;position:relative;padding-left:20px}
+.achievements li::before{content:"➤";position:absolute;left:0;color:#000;font-size:1.1em;top:0}
+.achievements li p a{text-decoration: none; font-weight: bold; color:#000;}
+
+
+/* Desktop view font size (screens wider than 768px) */
+  @media (min-width: 768px) {
+    body {
+  font-family: 'Times New Roman', serif;
+  margin: 20px;
+ background-color: #f4f4f4; /* Light background for better contrast */
+ display: flex;
+ justify-content: center; /* Center horizontally on desktop */
+ align-items: flex-start; /* Align items to the start vertically */
+ min-height: 100vh; /* Ensure full viewport height */
+}
+.a4-page {
+  width: 810px;
+  min-height: 1100px;
+   top:90px;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border: 5px dotted;
+  border-image: linear-gradient(to right, gold,green ,blue) 1;
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  background: linear-gradient(140deg, #ffc 80%, #ffc 80%, #cff 90%, #fff 100%); 
+  padding: 10px;   position: relative; top:0px;
+  margin: 0;
+  color: #000;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+ .profile-picture-container {
+  position: relative;
+  width: 260px;
+  height: 260px; background:linear-gradient(140deg, #090 0%, #009 50%, violet 70%, #090 100%); 
+  object-fit: cover;
+  border: 2px solid; border-radius: 3px;
+  border-image: linear-gradient(to bottom, red, white) 1;
+}
+ .header-content h1 {
+  margin: 0px 0px 90px 0px;
+  font-size: 40px;
+  text-shadow: 2px 2px 1px #ccc, -2px -2px 1px #fff;
+}
+ .header-content {padding-left:20px; }
+.header-content p{ font-size: 15px; margin-bottom: -10px; color:#000;}
+.header-content a {font-size: 15px; margin-bottom: -10px; color:#900099; text-decoration: none; }
+
+.body-content {
+  display: flex;
+ position: relative; left: 0px; top:0px;
+  gap: 20px;
+  padding: 2px;
+}
+
+.left-column {
+    width: 163px;
+  flex: 1;
+  padding-left: 10px;
+  
+}
+
+.right-column {
+  flex: 2; border-left: 1px solid #00000022;
+  padding-left: 10px;
+}
+
+.section {
+  margin-bottom: 0px;
+  padding: 1px;
+  background: #dddddd33;
+  border-radius: 3px;
+}
+
+.section h2 {
+  font-size: 20px;
+  color: #000;  
+  background: linear-gradient(35deg, #fff 0%, #00990033 50%, #fff 100%);
+  border-bottom: 2px solid #00009922; 
+  padding-bottom: 0px;
+}
+    .personal-info-table { width: 100%; border-collapse:collapse; font-size: 12px; padding-left: 0px; margin: 0; }
+.personal-info-table td { vertical-align: center; border: none; }
+.personal-info-table td:first-child { font-weight: bold; width: auto; }
+.personal-info-table td img{height: 15px ; width:15px; gap: 3px;}
+/* স্কিল সেকশনের স্টাইল */
+.skills-list ul {
+  list-style-type: disc; /* প্রথম লেভেলে বুলেট */
+  padding-left: 16px;
+}
+
+.skills-list ul li {
+  font-size: 14px;
+  margin-left: 1px;
+  position: relative;
+}
+
+/* উপ-আইটেমে ইফতার আইকন যুক্ত করা */
+.skills-list ul li ul {
+  list-style: none; /* ডিফল্ট বুলেট বন্ধ */
+  padding-left: 1px;
+}
+
+.skills-list ul li ul li::before {
+  content: "✓✓"; /* ইফতার আইকন */
+  font-size: 1px;
+  position: relative;
+  left: -2px;
+}
+
+.languages { }
+.language-item { margin-bottom: 10px; }
+.language-name { font-weight: bold; margin-bottom: 5px; font-size: 14px; }
+.language-bar-container { width: 100%; background-color: #00009933; border-radius: 50px; height: 7px; overflow: hidden; position: relative; }
+.language-bar { height: 100%; border-radius: 15px; background: green; animation: languageBarFill 2s forwards; }
+
+.profile-objective p {
+  text-align: justify;
+  font-size: 10px; padding-right: 0px;
+}
+ .education-item {
+  display: flex; padding-right: 20px;
+  justify-content: space-between;
+  /* নিচের বর্ডার Education item-এর নিচে আছে, এটা থাকছে */
+  border-bottom: 1px solid #ddf;
+}
+
+.education-details {
+  flex: 1;
+  font-size: 10px;
+}
+.education-details strong {font-size: 18px;}
+.education-details .institution{font-size: 16px;}
+.education-details .year-gpa{font-size: 14px; font-weight: bold;}
+
+    .qr-codes-container {display: flex; gap: 2px;}
+ .qr-column {text-align: center;width: 52px; /* Adjust as needed */}
+ .qr-code img {width: 50px; height: 50px;border : 1px solid #ffc0c039 ;cursor: pointer; }
+ .qr-column a {display: block;margin-top: -5px;text-decoration: none; color:#000;font-size: 5px;}
+
+    @media print {
+  body {
+    background: #fff;
+  }
+  .a4-page, .header, .section {
+    box-shadow: none;
+  }
+  .language-bar {
+    background: #ccc !important;
+  }
+}
+/* Modal Overlay */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background-color: rgba(0, 0, 0, 0.85);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  perspective: 1000px;
+}
+
+/* Card Container */
+.qr-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 16px;
+  text-align: center;
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.2);
+  animation: zoomRotate 0.8s ease-out forwards;
+}
+
+/* QR Image Styling */
+.qr-card img {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s;
+}
+
+/* Text Label */
+.qr-card .card-text {
+  margin-top: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Show modal */
+.modal-overlay.show {
+  display: flex;
+}
+
+/* 3D Rotation and Zoom */
+@keyframes zoomRotate {
+  0% {
+    transform: rotateY(-90deg) scale(0.1);
+    opacity: 0;
+  }
+  100% {
+    transform: rotateY(0deg) scale(1);
+    opacity: 1;
+  }
+}
+    .profile-objective p{text-align:justify;line-height:1.1;margin-bottom:0;font-size:12px}
+.achievements ul{list-style-type:none;padding:0;margin-top:0;font-size:10px}
+.achievements li{margin-bottom:10px;line-height:1;position:relative;padding-left:20px}
+.achievements li::before{content:"➤";position:absolute;left:0;color:#000;font-size:1.1em;top:0}
+  
+ 
+    
+  }
+ /* mine */
+
+ 
+
+
+ 
+
+/* --- Navigation Bar Styles --- */
+
+
+
+
+   
+
