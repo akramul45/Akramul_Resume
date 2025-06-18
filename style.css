@@ -283,10 +283,10 @@ body {
 }
 
 .skills-list ul li ul li::before {
-  content: "✓✓"; /* ইফতার আইকন */
+  content: "⭐"; /* ইফতার আইকন */
   font-size: 1px;
   position: relative;
-  left: -2px;
+  left: 15px;
 }
 
 .languages { }
