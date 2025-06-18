@@ -279,14 +279,14 @@ body {
 /* উপ-আইটেমে ইফতার আইকন যুক্ত করা */
 .skills-list ul li ul {
   list-style: none; /* ডিফল্ট বুলেট বন্ধ */
-  padding-left: 1px;
+  padding-left: 22px;
 }
 
 .skills-list ul li ul li::before {
   content: "⭐"; /* ইফতার আইকন */
   font-size: 1px;
   position: relative;
-  left: 15px;
+  left: -5px;
 }
 
 .languages { }
